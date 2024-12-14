@@ -1,7 +1,16 @@
-import React from 'react'
+"use client";
+
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import fetchDB from '@/services/db-requests';
 
 const ExperienceSection = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        setData(fetchDB('experiences'));
+    }, []);
+
     return (
         <div>
             ExperienceSection
