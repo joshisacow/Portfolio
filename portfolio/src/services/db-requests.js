@@ -1,10 +1,12 @@
 const fetchDB = async (table) => {
-    const resp = await fetch(process.env.NEXT_PUBLIC_DB_URL + 'rest/v1/' + table, {
+    const data = await fetch(process.env.NEXT_PUBLIC_DB_URL + 'rest/v1/' + table, {
         headers: {
             'apikey': process.env.NEXT_PUBLIC_DB_KEY
         }
-    });
-    const data = await resp.json();
+    })
+        .then(res => res.json())
+        .catch(err => console.log(err));
+
     console.log(data);
     return data;
 }
