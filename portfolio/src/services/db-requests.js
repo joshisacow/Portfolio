@@ -5,7 +5,7 @@ const fetchDB = async (table) => {
         }
     })
         .then(res => res.json())
-        .catch(err => console.log(err));
+        .catch(err => console.error(err));
 
     console.log(data);
     return data;

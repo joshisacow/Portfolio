@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import fetchDB from '@/services/db-requests';
-import LinkedinIcon from '@/components/icons/LinkedinIcon';
 
 const ExperienceSection = () => {
     const [data, setData] = useState([]);
@@ -14,7 +13,7 @@ const ExperienceSection = () => {
     }, []);
 
     return (
-        <div>
+        <div className='mt-10'>
             ExperienceSection
             {data && data.map((experience, index) => (
                 <Link key={experience.id} href={experience.link ?? "/"}>
@@ -30,7 +29,7 @@ const ExperienceSection = () => {
                     </div>
                 </Link>
             ))}
-            <Link className='font-semibold' href="">View Full Resume</Link>
+            <Link className='font-semibold' href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Full Resume</Link>
         </div>
 
     )
