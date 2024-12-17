@@ -8,7 +8,7 @@ export default function Home() {
       <HeroSection />
       <div className="flex flex-row">
         <SideBar />
-        <div>
+        <div className = "w-full">
           <div id="about-me">
             <AboutMeSection />
           </div>
