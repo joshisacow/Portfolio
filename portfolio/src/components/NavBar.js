@@ -10,9 +10,9 @@ const navigation = [
 
 const NavBar = () => {
     return (
-        <div className="fixed sm:absolute top-1 sm:top-4 w-full mx-auto h-16">
+        <div className="fixed sm:absolute top-2 sm:top-4 w-full mx-auto h-16">
             <div className="flex items-center justify-center h-full">
-                <div className="bg-[var(--background)] opacity-90 rounded-full px-2 py-2 sm:px-6 lg:px-8 flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg">
+                <div className="bg-[var(--background)]/95 backdrop-blur-2xl backdrop-contrast-75 backdrop-brightness-125 dark:backdrop-brightness-75 rounded-full px-2 py-2 sm:px-6 lg:px-8 flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg">
                     <Link href="/">
                         <img
                             alt="Your Company"
@@ -26,7 +26,7 @@ const NavBar = () => {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="hover:bg-[var(--background-2)] hover:text-[var(--secondary-color)] rounded-md px-2 py-1 sm:px-3 sm:py-2"
+                            className="relative rounded-3xl px-2 py-1 sm:px-3 sm:py-2 hover:bg-white/40 dark:hover:bg-white/10 hover:backdrop-blur-2xl hover:text-[var(--secondary-color)] transition-all duration-200 "
                         >
                             {item.name}
                         </Link>
