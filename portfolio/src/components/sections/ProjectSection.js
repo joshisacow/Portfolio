@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import fetchDB from '@/services/db-requests'
+import fetchDB from '@/utils/db-requests'
 
 const ProjectSection = () => {
     const [projects, setProjects] = useState([]);
@@ -14,14 +14,14 @@ const ProjectSection = () => {
                 data.sort((a, b) => a.id - b.id)
                 setProjects(data.slice(0, 3));
             });
-    });
+    }, []);
 
     return (
         <div className='mt-10'>
             ProjectSection
             {projects && projects.map((project, index) => (
                 <Link key={project.id} href={project.link ?? "/"}>
-                    <div className="shadow rounded-lg p-4 hover:bg-gray-700 flex flex-row gap-4 group">
+                    <div className="shadow rounded-lg p-4 hover:bg-[var(--background-2)] flex flex-row gap-4 group">
                         {project.image_id && 
                             <Image 
                                 src={'/project_photos/' + project.image_id} 

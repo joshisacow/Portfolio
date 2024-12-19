@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import fetchDB from '@/services/db-requests';
+import fetchDB from '@/utils/db-requests';
 
 const ExperienceSection = () => {
     const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ const ExperienceSection = () => {
         <div className='mt-10'>
             ExperienceSection
             {data && data.map((experience, index) => (
-                <Link key={experience.id} href={experience.link ?? "/"}>
+                <Link key={experience.id} href={experience.link ?? "/"} target="_blank" rel="noopener noreferrer">
                     <div className="shadow rounded-lg p-4 hover:bg-gray-700">
                         <h2 className='font-medium'>{experience.company} | {experience.position}</h2>
                         <p className="text-xs text-gray-400">{experience.start} - {experience.end}</p>

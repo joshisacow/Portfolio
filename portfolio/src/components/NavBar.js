@@ -1,6 +1,7 @@
 // nav bar
 import React from 'react';
 import Link from 'next/link';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const navigation = [
     { name: 'About Me', href: '#about-me' },
@@ -21,7 +22,7 @@ const NavBar = () => {
                                 className="h-8 w-auto"
                             />
                         </Link>
-                        
+                        <ThemeSwitcher />
                     </div>
                 
                     <div className="sm:ml-6">
