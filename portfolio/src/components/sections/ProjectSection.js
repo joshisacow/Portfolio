@@ -22,16 +22,19 @@ const ProjectSection = () => {
             ProjectSection
             {projects && projects.map((project, index) => (
                 <Link key={project.id} href={project.link ?? "/"}>
-                    <div className="shadow rounded-lg p-4 flex flex-row gap-4 group hover:bg-background2 hover:z-10 hover:-translate-y-1 hover:shadow-2xl transform transition-transform duration-300">
+                    <div className="shadow rounded-lg p-4 flex flex-col-reverse sm:flex-row gap-4 group hover:bg-background2 hover:z-10 hover:-translate-y-1 hover:shadow-2xl transform transition-transform duration-300">
                         {project.image_id && 
-                            <Image 
-                                src={'/project_photos/' + project.image_id} 
-                                width={200} 
-                                height={200} 
-                                alt={project.name} 
-                                className='rounded-md border-2 border-background2 group-hover:border-secondary/40'
-                            />}
-                        <div>
+                            <div className="flex justify-center sm:justify-start w-full sm:w-auto">
+                                <Image 
+                                    src={'/project_photos/' + project.image_id} 
+                                    width={200} 
+                                    height={200} 
+                                    alt={project.name} 
+                                    className='rounded-md border-2 border-background2 group-hover:border-secondary/40 object-cover w-full sm:w-[150px] md:w-[200px] lg:w-[150px] xl:w-[200px] h-auto'
+                                />
+                            </div>
+                        }
+                        <div className='flex-1'>
                             <h2 className='font-semibold group-hover:text-secondary'>{project.name}</h2>
                             <p className="text-xs text-gray-400">{project.year}</p>
                             <p className="">{project.short_desc}</p>
