@@ -22,7 +22,7 @@ const ProjectSection = () => {
             ProjectSection
             {projects && projects.map((project, index) => (
                 <Link key={project.id} href={project.link ?? "/"}>
-                    <div className="shadow rounded-lg p-4 flex flex-col-reverse sm:flex-row gap-4 group hover:bg-background2 hover:z-10 hover:-translate-y-1 hover:shadow-2xl transform transition-transform duration-300">
+                    <div className="shadow rounded-lg p-4 flex flex-col-reverse sm:flex-row gap-4 group hover:bg-background2 hover:-translate-y-1 hover:shadow-2xl transform transition-transform duration-300">
                         {project.image_id && 
                             <div className="flex justify-center sm:justify-start w-full sm:w-auto">
                                 <Image 
