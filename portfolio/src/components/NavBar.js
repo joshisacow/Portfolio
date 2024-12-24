@@ -10,7 +10,7 @@ const navigation = [
 
 const NavBar = () => {
     return (
-        <div className="fixed sm:absolute top-2 sm:top-4 w-full mx-auto h-16">
+        <div className="fixed lg:absolute top-2 sm:top-4 w-full mx-auto h-16">
             <div className="flex items-center justify-center h-full">
                 <div className="bg-background/60 backdrop-blur-md backdrop-brightness-95 dark:backdrop-brightness-125 rounded-full px-2 py-2 sm:px-6 lg:px-8 flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg">
                     <Link href="/">
