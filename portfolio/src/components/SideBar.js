@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const SideBar = () => {
     return (
-        <div className="flex-col sticky top-0 h-screen hidden sm:w-1/3 sm:min-w-64 lg:w-5/12 sm:flex p-10">
+        <div className="hidden lg:flex lg:flex-col lg:max-h-screen lg:sticky lg:top-0 lg:h-screen lg:w-[48%] lg:p-0">
             <div>
                 <h1>Joshua Chen</h1>
                 <h2>Software Engineer</h2>

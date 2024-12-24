@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        background2: "var(--background-2)",
-        foreground: "var(--foreground)",
-        secondary: "var(--secondary-color)",
-        tertiary: "var(--tertiary-color)",
+        background: "rgb(var(--background))",
+        background2: "rgb(var(--background-2))",
+        foreground: "rgb(var(--foreground))",
+        secondary: "rgb(var(--secondary-color))",
+        tertiary: "rgb(var(--tertiary-color))",
       },
     },
   },

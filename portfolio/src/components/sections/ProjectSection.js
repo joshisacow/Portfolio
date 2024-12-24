@@ -22,14 +22,14 @@ const ProjectSection = () => {
             ProjectSection
             {projects && projects.map((project, index) => (
                 <Link key={project.id} href={project.link ?? "/"}>
-                    <div className="shadow rounded-lg p-4 hover:bg-background2 flex flex-row gap-4 group">
+                    <div className="shadow rounded-lg p-4 flex flex-row gap-4 group hover:bg-background2 hover:z-10 hover:-translate-y-1 hover:shadow-2xl transform transition-transform duration-300">
                         {project.image_id && 
                             <Image 
                                 src={'/project_photos/' + project.image_id} 
                                 width={200} 
                                 height={200} 
                                 alt={project.name} 
-                                className='rounded-md border-2 border-gray-600 group-hover:border-gray-400'
+                                className='rounded-md border-2 border-background2 group-hover:border-secondary/40'
                             />}
                         <div>
                             <h2 className='font-semibold group-hover:text-secondary'>{project.name}</h2>
@@ -37,7 +37,7 @@ const ProjectSection = () => {
                             <p className="">{project.short_desc}</p>
                             <div className="flex flex-row flex-wrap">
                                 {project.skills && project.skills.map((skill, index) => (
-                                    <p key={index} className="rounded-xl p-1.5 bg-secondary text-background mr-1 text-xs">{skill}</p>
+                                    <p key={index} className="rounded-xl p-1.5 bg-secondary/20 dark:bg-secondary/30 text-secondary mr-1 text-xs">{skill}</p>
                                 ))}
                             </div>
                         </div>
