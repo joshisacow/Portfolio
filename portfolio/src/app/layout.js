@@ -1,22 +1,45 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter, Roboto_Mono, Montserrat, Space_Mono, Anek_Devanagari, Nunito, Inconsolata } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/utils/ThemeProvider";
 import NavBar from "@/components/NavBar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+const roboto_mono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+});
+
+const space_mono = Space_Mono({
+  variable: "--font-space-mono",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const anek = Anek_Devanagari({
+  variable: "--font-anek-devanagari",
+  subsets: ["latin"],
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+});
+
+const inconsolata = Inconsolata({
+  variable: "--font-inconsolata",
+  subsets: ["latin"],
+});
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -27,7 +50,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased` + 'bg-background text-foreground'} 
+        className={`${montserrat.variable} ${space_mono.variable} ${montserrat.className} antialiased` + 'bg-background text-foreground'} 
         suppressHydrationWarning
       >
         <ThemeProvider>

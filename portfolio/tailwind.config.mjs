@@ -14,6 +14,10 @@ export default {
         secondary: "rgb(var(--secondary-color))",
         tertiary: "rgb(var(--tertiary-color))",
       },
+      fontFamily: {
+        sans: ['var(--font-montserrat)'],
+        mono: ['var(--font-space-mono)'],
+      },
     },
   },
   plugins: [],
