@@ -23,7 +23,7 @@ const ExperienceSection = () => {
                         <p className="">{experience.desc}</p>
                         <div className="flex flex-row flex-wrap">
                             {experience.skills && experience.skills.map((skill, index) => (
-                                <p key={index} className="rounded-xl p-1.5 bg-secondary/20 dark:bg-secondary/30 text-secondary mr-1 text-xs">{skill}</p>
+                                <p key={index} className="rounded-xl p-1.5 bg-secondary/20 dark:bg-secondary/30 text-secondary mr-1 text-xs font-medium">{skill}</p>
                             ))}
                         </div>
                     </div>
